@@ -12,7 +12,11 @@ class MakeSkillCategoryTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('skill_category', function (Blueprint $table) {
+            $table->increments('id')->index();
+            $table->text('name');
+            $table->timestamps();
+        });
     }
 
     /**

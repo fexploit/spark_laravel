@@ -13,9 +13,9 @@ class MakeUserSkillTable extends Migration
     public function up()
     {
         Schema::create('user_skill', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->index();
-            $table->text('');
+            $table->increments('id')->index();
+            $table->integer('user_id');
+            $table->integer('skill_id');
             $table->timestamps();
         });
     }
