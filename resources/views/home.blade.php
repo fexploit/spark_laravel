@@ -41,7 +41,6 @@
             </div>
         </div>
 
-
         <!-- Current Tasks -->
         <div class="row" v-show="tasks.length > 0">
             <div class="col-md-8 col-md-offset-2">

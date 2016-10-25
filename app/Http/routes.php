@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('spark::welcome');
 });
 
-Route::get('/home', 'TaskController@index');
-Route::get('/activity', 'ActivityController@index');
+Route::get('/add', 'TaskController@index');
+Route::get('/show', 'ActivityController@index');

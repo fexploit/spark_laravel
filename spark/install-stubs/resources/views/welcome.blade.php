@@ -39,7 +39,6 @@
             justify-content: center;
         }
 
-
         .text-center {
             text-align: center;
         }
@@ -69,26 +68,26 @@
     </style>
 </head>
 <body>
-    <div class="full-height flex-column">
-        <nav class="links">
-            <a href="/login" style="margin-right: 15px;">
-                <button>
-                    Login
-                </button>
-            </a>
+<div class="full-height flex-column">
+    <nav class="links">
+        <a href="/login" style="margin-right: 15px;">
+            <button>
+                Login
+            </button>
+        </a>
 
-            <a href="/register">
-                <button>
-                    Register
-                </button>
-            </a>
-        </nav>
+        <a href="/register">
+            <button>
+                Register
+            </button>
+        </a>
+    </nav>
 
-        <div class="flex-fill flex-center">
-            <h1 class="text-center">
-                <img src="/img/color-logo.png">
-            </h1>
-        </div>
+    <div class="flex-fill flex-center">
+        <h1 class="text-center">
+            <img src="/img/color-logo.png">
+        </h1>
     </div>
+</div>
 </body>
 </html>

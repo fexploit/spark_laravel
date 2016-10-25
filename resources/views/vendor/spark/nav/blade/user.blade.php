@@ -4,7 +4,8 @@
         <div class="navbar-header">
             <!-- Collapsed Hamburger -->
             <div class="hamburger">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#spark-navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#spark-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -13,7 +14,7 @@
             </div>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="/home">
+            <a class="navbar-brand" href="/">
                 <!-- Spark -->
                 <img src="/img/mono-logo.png" style="height: 32px;">
             </a>
@@ -51,15 +52,15 @@
                             <li class="divider"></li>
                         @endif
 
-                        <!-- Developer -->
+                    <!-- Developer -->
                         @if (Spark::developer(Auth::user()->email))
                             @include('spark::nav.developer')
                         @endif
 
-                        <!-- Subscription Reminders -->
+                    <!-- Subscription Reminders -->
                         @include('spark::nav.subscriptions')
 
-                        <!-- Settings -->
+                    <!-- Settings -->
                         <li class="dropdown-header">Settings</li>
 
                         <!-- Your Settings -->
@@ -70,7 +71,7 @@
                         </li>
 
                         @if (Spark::usesTeams())
-                            <!-- Team Settings -->
+                        <!-- Team Settings -->
                             @include('spark::nav.blade.teams')
                         @endif
 
