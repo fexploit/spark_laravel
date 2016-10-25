@@ -1,20 +1,22 @@
 @extends('spark::layouts.app')
 
 @section('content')
-<home :user="user" inline-template>
+<activity-log :user="user" inline-template>
     <div class="container">
-        <!-- Application Dashboard -->
-        <div class="row">
+        <!-- No Activity -->
+        <div class="row" v-show="activitiesLoaded && activities.length == 0">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
+                    <div class="panel-heading">Hello</div>
 
                     <div class="panel-body">
-                        Hallo
+                        You can add a new skill under here!
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
-</home>
+</activity-log>
 @endsection

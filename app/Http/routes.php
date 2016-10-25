@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('/home', 'TaskController@index');
 Route::get('/activity', 'ActivityController@index');
+Route::get('/addskill', 'addSkillController@index');

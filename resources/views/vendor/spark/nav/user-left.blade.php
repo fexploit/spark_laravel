@@ -1,12 +1,12 @@
 <!-- Left Side Of Navbar -->
 <li>
-    <a href="/home">
-        Tasks
+    <a href="/">
+        Home
     </a>
 </li>
 
 <li>
-    <a href="/activity">
-        Activity Log
+    <a href="/addskill">
+        Add Skill
     </a>
 </li>
