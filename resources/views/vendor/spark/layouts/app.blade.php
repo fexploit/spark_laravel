@@ -46,6 +46,15 @@
         @endif
 
         <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.1.1.js"
+                integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+                crossorigin="anonymous">
+        </script>
+        <script>
+            jQuery(document).ready(function () {
+                @yield('postJquery')
+            });
+        </script>
         <script src="/js/app.js"></script>
         <script src="/js/sweetalert.min.js"></script>
     </div>

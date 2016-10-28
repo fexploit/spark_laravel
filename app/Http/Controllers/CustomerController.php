@@ -21,8 +21,8 @@ class CustomerController extends Controller {
     public function store()
     {
         $this->validate(request(), [
-           'name' => 'required|unique:customers|max:255',
-           'mail' => 'required|unique:customers|max:255',
+           'name' => 'unique:customers|max:255',
+           'mail' => 'unique:customers|max:255',
            'address' => 'max:255',
            'zip' => 'max:8',
            'city' => 'max:255',
@@ -53,6 +53,15 @@ class CustomerController extends Controller {
 
     public function update(Customer $customer)
     {
+        $this->validate(request(), [
+            'name' => 'unique:customers,name,' . $customer->id . '|max:255',
+            'mail' => 'unique:customers,mail,' . $customer->id . '|max:255',
+            'address' => 'max:255',
+            'zip' => 'max:8',
+            'city' => 'max:255',
+            'country' => 'max:255',
+        ]);
+
         $customer->update(request()->all());
 
         return redirect('/customers/show');
