@@ -10,11 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
     return view('spark::welcome');
 });
 
-Route::get('/add', 'CustomerController@index');
-Route::get('/show', 'CustomerController@show');
-Route::post('/added', 'CustomerController@store');
+Route::get('/customers/add', 'CustomerController@add');
+Route::get('/customers/show', 'CustomerController@show');
+Route::get('/customers/{customer}/edit', 'CustomerController@edit');
+Route::get('/customers/{customer}/delete', 'CustomerController@delete');
+
+Route::post('/customers/store', 'CustomerController@store');
+
+Route::patch('/customers/{customer}', 'CustomerController@update');
+

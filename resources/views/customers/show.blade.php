@@ -29,9 +29,14 @@
                     <td>{{ $customer->phone }}</td>
                     <td>{{ $customer->mail }}</td>
                     <td>{{ $customer->country }}</td>
+                    <td><a class="btn btn-info" href="/customers/{{ $customer->id }}/edit">Edit</a></td>
+                    <td><a class="btn btn-danger"
+                           onclick="var del = window.confirm('Are you sure you want to delete entry {{ $customer->name }}?');
+                                   if (del) { document.location.href = '/customers/{{ $customer->id }}/delete'; }">
+                            Delete
+                        </a></td>
                 </tr>
             @endforeach
-
             </tbody>
         </table>
     </div>
