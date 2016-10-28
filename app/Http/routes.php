@@ -14,6 +14,10 @@ Route::get('/', function () {
     return view('spark::welcome');
 });
 
+Route::get('/home', function () {
+    return view('spark::welcome');
+});
+
 Route::get('/customers/add', 'CustomerController@add');
 Route::get('/customers/show', 'CustomerController@show');
 Route::get('/customers/{customer}/edit', 'CustomerController@edit');

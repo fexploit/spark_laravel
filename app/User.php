@@ -15,7 +15,8 @@ class User extends SparkUser
      * @var array
      */
     protected $fillable = [
-        'name',
+        'firstName',
+        'lastName',
         'email',
     ];
 
