@@ -1,4 +1,3 @@
-
 /*
  |--------------------------------------------------------------------------
  | Laravel Spark Bootstrap
@@ -17,6 +16,11 @@
 require('spark-bootstrap');
 
 require('./components/bootstrap');
+
+Spark.forms.register = {
+    firstName: '',
+    lastName: ''
+};
 
 var app = new Vue({
     mixins: [require('spark')]

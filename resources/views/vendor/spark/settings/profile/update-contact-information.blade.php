@@ -9,15 +9,28 @@
             </div>
 
             <form class="form-horizontal" role="form">
-                <!-- Name -->
-                <div class="form-group" :class="{'has-error': form.errors.has('name')}">
-                    <label class="col-md-4 control-label">Name</label>
+                <!-- First name -->
+                <div class="form-group" :class="{'has-error': form.errors.has('firstName')}">
+                    <label class="col-md-4 control-label">First name</label>
 
                     <div class="col-md-6">
-                        <input type="text" class="form-control" name="name" v-model="form.name">
+                        <input type="text" class="form-control" name="name" v-model="form.firstName">
 
                         <span class="help-block" v-show="form.errors.has('name')">
-                            @{{ form.errors.get('name') }}
+                            @{{ form.errors.get('firstName') }}
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Last name -->
+                <div class="form-group" :class="{'has-error': form.errors.has('lastName')}">
+                    <label class="col-md-4 control-label">Last name</label>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="name" v-model="form.lastName">
+
+                        <span class="help-block" v-show="form.errors.has('lastName')">
+                            @{{ form.errors.get('lastName') }}
                         </span>
                     </div>
                 </div>

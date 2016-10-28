@@ -2,7 +2,7 @@
     <!-- Team Name -->
     @if (Spark::usesTeams())
         <div class="form-group" :class="{'has-error': registerForm.errors.has('team')}" v-if=" ! invitation">
-            <label class="col-md-4 control-label">Team Name</label>
+            <label class="col-md-4 control-label">Company</label>
 
             <div class="col-md-6">
                 <input type="name" class="form-control" name="team" v-model="registerForm.team" autofocus>
@@ -14,15 +14,28 @@
         </div>
     @endif
 
-    <!-- Name -->
-    <div class="form-group" :class="{'has-error': registerForm.errors.has('name')}">
-        <label class="col-md-4 control-label">Name</label>
+    <!-- First name -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('firstName')}">
+        <label class="col-md-4 control-label">First name</label>
 
         <div class="col-md-6">
-            <input type="name" class="form-control" name="name" v-model="registerForm.name" autofocus>
+            <input type="name" class="form-control" name="name" v-model="registerForm.firstName" autofocus>
 
-            <span class="help-block" v-show="registerForm.errors.has('name')">
-                @{{ registerForm.errors.get('name') }}
+            <span class="help-block" v-show="registerForm.errors.has('firstName')">
+                @{{ registerForm.errors.get('firstName') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Last name -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('lastName')}">
+        <label class="col-md-4 control-label">Last name</label>
+
+        <div class="col-md-6">
+            <input type="name" class="form-control" name="name" v-model="registerForm.lastName" autofocus>
+
+            <span class="help-block" v-show="registerForm.errors.has('lastName')">
+                @{{ registerForm.errors.get('lastName') }}
             </span>
         </div>
     </div>

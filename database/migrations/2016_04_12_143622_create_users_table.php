@@ -13,16 +13,33 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            //User
             $table->increments('id');
-            $table->string('name');
+            $table->tinyInteger('type')->default(5);
+            $table->string('firstName', 50);
+            $table->string('lastName', 50);
+            $table->string('companyName', 100)->unique();
             $table->string('email')->unique();
             $table->string('password', 60);
+
+            //Company
+            $table->string('streetName', 100)->nullable();
+            $table->integer('houseNumber')->nullable();
+            $table->string('zipCode', 10)->nullable();
+            $table->string('city', 100)->nullable();
+            $table->string('country', 100)->nullable();
+            $table->string('phone', 15)->nullable();
+            $table->string('mobile', 15)->nullable();
+
+            $table->integer('kvk')->nullable();
+            $table->string('btw', 15)->nullable();
+
+            //Spark
             $table->rememberToken();
             $table->text('photo_url')->nullable();
             $table->tinyInteger('uses_two_factor_auth')->default(0);
             $table->string('authy_id')->nullable();
             $table->string('country_code', 10)->nullable();
-            $table->string('phone', 25)->nullable();
             $table->string('two_factor_reset_code', 100)->nullable();
             $table->integer('current_team_id')->nullable();
             $table->string('stripe_id')->nullable();

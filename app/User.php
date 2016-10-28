@@ -15,9 +15,20 @@ class User extends SparkUser
      * @var array
      */
     protected $fillable = [
+        'type',
         'firstName',
         'lastName',
+        'companyName',
         'email',
+        'streetName',
+        'houseNumber',
+        'zipCode',
+        'city',
+        'country',
+        'phone',
+        'mobile',
+        'kvk',
+        'btw',
     ];
 
     /**
@@ -30,7 +41,6 @@ class User extends SparkUser
         'remember_token',
         'authy_id',
         'country_code',
-        'phone',
         'card_brand',
         'card_last_four',
         'card_country',
