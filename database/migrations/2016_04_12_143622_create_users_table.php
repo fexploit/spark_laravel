@@ -31,8 +31,8 @@ class CreateUsersTable extends Migration
             $table->string('phone', 15)->nullable();
             $table->string('mobile', 15)->nullable();
 
-            $table->integer('kvk')->nullable();
-            $table->string('btw', 15)->nullable();
+            $table->integer('kvk')->nullable()->unique();
+            $table->string('btw', 15)->nullable()->unique();
 
             //Spark
             $table->rememberToken();

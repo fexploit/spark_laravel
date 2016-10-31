@@ -35,8 +35,8 @@ class ProfileDetailsController extends Controller {
             'country'     => 'required|max:100|filled',
             'phone'       => 'required|max:15|filled',
             'mobile'      => 'required|max:15|filled',
-            'kvk'         => 'required|digits:8|filled',
-            'btw'         => 'required|max:15|filled',
+            'kvk'         => 'required|digits:8|unique:users,kvk,' . $user->id . '|filled',
+            'btw'         => 'required|max:15|unique:users,btw,' . $user->id . '|filled',
         ]);
 
         request()->user()->forceFill([
