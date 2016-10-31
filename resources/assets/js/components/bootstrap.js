@@ -13,3 +13,5 @@ require('./../spark-components/bootstrap');
 
 require('./home');
 require('./activity');
+
+require('./settings/profile/update-profile-details');

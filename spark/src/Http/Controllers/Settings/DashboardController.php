@@ -3,6 +3,7 @@
 namespace Laravel\Spark\Http\Controllers\Settings;
 
 use Laravel\Spark\Http\Controllers\Controller;
+use Auth;
 
 class DashboardController extends Controller
 {
@@ -23,6 +24,7 @@ class DashboardController extends Controller
      */
     public function show()
     {
-        return view('spark::settings');
+        $user = Auth::user();
+        return view('spark::settings', compact('user'));
     }
 }

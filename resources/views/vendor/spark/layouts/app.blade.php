@@ -57,6 +57,7 @@
         </script>
         <script src="/js/app.js"></script>
         <script src="/js/sweetalert.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     </div>
 </body>
 </html>

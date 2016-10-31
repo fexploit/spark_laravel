@@ -5,8 +5,7 @@ namespace App;
 use Laravel\Spark\CanJoinTeams;
 use Laravel\Spark\User as SparkUser;
 
-class User extends SparkUser
-{
+class User extends SparkUser {
 
     use CanJoinTeams;
     /**
@@ -58,23 +57,21 @@ class User extends SparkUser
      * @var array
      */
     protected $casts = [
-        'trial_ends_at' => 'date',
+        'trial_ends_at'        => 'date',
         'uses_two_factor_auth' => 'boolean',
     ];
 
     /**
      * Get all of the user's tasks.
      */
-    public function tasks()
-    {
+    public function tasks () {
         return $this->hasMany(Task::class)->orderBy('created_at', 'asc');
     }
 
     /**
      * Get all of the user activity.
      */
-    public function activity()
-    {
+    public function activity () {
         return $this->hasMany(Activity::class)->orderBy('created_at', 'desc');
     }
 }
