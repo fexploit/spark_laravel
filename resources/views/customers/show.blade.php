@@ -8,12 +8,12 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Address</th>
-                <th>Zip</th>
-                <th>City</th>
-                <th>Phone</th>
-                <th>E-mail</th>
+                <th>E-mail address</th>
+                <th>Phone number</th>
                 <th>Country</th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             </thead>
 
@@ -22,18 +22,15 @@
             @foreach ($customers as $customer)
                 <tr>
                     <td>{{ $customer->id }}</td>
-                    <td>{{ $customer->name }}</td>
-                    <td>{{ $customer->address }}</td>
-                    <td>{{ $customer->zip }}</td>
-                    <td>{{ $customer->city }}</td>
-                    <td>{{ $customer->phone }}</td>
-                    <td>{{ $customer->mail }}</td>
-                    <td>{{ $customer->country }}</td>
-                    <td><a class="btn btn-info" href="/customers/{{ $customer->id }}/edit">Edit</a></td>
-                    <td><a class="btn btn-danger"
-                           onclick="var del = window.confirm('Are you sure you want to delete entry {{ $customer->name }}?');
+                    <td>{{ $customer->c_name }}</td>
+                    <td>{{ $customer->c_email }}</td>
+                    <td>{{ $customer->c_phone }}</td>
+                    <td>{{ $customer->c_country }}</td>
+                    <td><a class="btn btn-info btn-sm" href="/customers/{{ $customer->id }}/more">more</a></td>
+                    <td><a class="btn btn-danger btn-sm"
+                           onclick="var del = window.confirm('Are you sure you want to delete entry {{ $customer->c_name }}?');
                                    if (del) { document.location.href = '/customers/{{ $customer->id }}/delete'; }">
-                            Delete
+                            delete
                         </a></td>
                 </tr>
             @endforeach

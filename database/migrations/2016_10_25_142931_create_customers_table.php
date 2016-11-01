@@ -42,8 +42,9 @@ class CreateCustomersTable extends Migration {
             $table->string('p_country', 100);
 
             //dates
-            $table->timestampTz('added_on');
             $table->dateTimeTz('ending_on');
+            $table->timestamps();
+
         });
     }
 

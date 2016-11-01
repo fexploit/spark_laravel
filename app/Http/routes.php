@@ -20,12 +20,13 @@ Route::get('/home', function () {
 
 Route::get('/customers/add', 'CustomerController@add');
 Route::get('/customers/show', 'CustomerController@show');
-Route::get('/customers/{customer}/edit', 'CustomerController@edit');
 Route::get('/customers/{customer}/delete', 'CustomerController@delete');
+Route::get('/customers/{customer}/more', 'CustomerController@more');
 
 Route::post('/customers/store', 'CustomerController@store');
 
-Route::patch('/customers/{customer}', 'CustomerController@update');
+Route::patch('/company/{customer}', 'CustomerController@c_update');
+Route::patch('/person/{customer}', 'CustomerController@p_update');
 
 Route::put('/settings/profile/details', 'ProfileDetailsController@update');
 

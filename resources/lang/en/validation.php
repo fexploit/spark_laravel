@@ -111,6 +111,29 @@ return [
     |
     */
 
-    'attributes' => [],
-
+    'attributes' => [
+        //company
+        'c_name' => 'name',
+        'c_email' => 'e-mail address',
+        'c_phone' => 'phone number',
+        'c_street' => 'street name',
+        'c_streetNum' => 'street number',
+        'c_zip' => 'zip code',
+        'c_country' => 'country',
+        'c_city' => 'city',
+        'c_kvk' => 'KVK',
+        'c_btw' => 'BTW',
+        //contact person
+        'p_firstName' => 'first name',
+        'p_lastName' => 'last name',
+        'p_email' => 'e-mail address',
+        'p_phone' => 'phone number',
+        'p_mobile' => 'mobile number',
+        'p_street' => 'street name',
+        'p_streetNum' => 'street number',
+        'p_zip' => 'zip code',
+        'p_city' => 'city',
+        'p_country' => 'country',
+        'ending_on' => 'ending on',
+    ],
 ];
