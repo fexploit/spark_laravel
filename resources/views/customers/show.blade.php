@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container">
-        <table class="table table-striped table-responsive">
+        <table class="table table-striped table-responsive sortable">
             <thead>
             <!-- headers here -->
             <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th data-defaultsort="asc">Name</th>
                 <th>E-mail address</th>
                 <th>Phone number</th>
                 <th>Country</th>

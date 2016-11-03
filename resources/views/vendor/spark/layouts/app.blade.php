@@ -15,6 +15,7 @@
     <!-- CSS -->
     <link href="/css/sweetalert.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/bootstrap-sortable.css" rel="stylesheet">
 
     <!-- Scripts -->
     @yield('scripts', '')
@@ -58,6 +59,7 @@
         <script src="/js/app.js"></script>
         <script src="/js/sweetalert.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script src="/js/bootstrap-sortable.js"></script>
     </div>
 </body>
 </html>

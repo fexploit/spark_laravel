@@ -18,28 +18,16 @@ class CreateCustomersTable extends Migration {
             $table->foreign('user_id')->references('id')->on('users');
 
             //Company
-            $table->string('c_name', 100)->unique();
-            $table->string('c_email')->unique();
-            $table->string('c_phone', 15);
-            $table->string('c_street', 100);
-            $table->integer('c_streetNum');
-            $table->string('c_zip', 10);
-            $table->string('c_city', 100);
-            $table->string('c_country', 100);
-            $table->integer('c_kvk')->unique();
-            $table->string('c_btw', 15)->unique();
-
-            //Contact person
-            $table->string('p_firstName', 50);
-            $table->string('p_lastName', 50);
-            $table->string('p_email')->unique();
-            $table->string('p_phone', 15);
-            $table->string('p_mobile', 15);
-            $table->string('p_street', 100);
-            $table->integer('p_streetNum');
-            $table->string('p_zip', 10);
-            $table->string('p_city', 100);
-            $table->string('p_country', 100);
+            $table->string('name', 100)->unique();
+            $table->string('email')->unique();
+            $table->string('phone', 15);
+            $table->string('street', 100);
+            $table->integer('streetNum');
+            $table->string('zip', 10);
+            $table->string('city', 100);
+            $table->string('country', 100);
+            $table->integer('kvk')->unique();
+            $table->string('btw', 15)->unique();
 
             //dates
             $table->dateTimeTz('ending_on');

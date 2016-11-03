@@ -17,6 +17,9 @@ require('spark-bootstrap');
 
 require('./components/bootstrap');
 
+require('moment');
+require('moment/locale/cs');
+
 Spark.forms.register = {
     firstName: '',
     lastName: ''
